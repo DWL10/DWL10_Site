@@ -4,10 +4,19 @@ const sysOnline = document.getElementById('online');
 const sysOffline = document.getElementById('offline');
 const sysConnect = document.getElementById('connect');
 const main = document.getElementById('main');
-sysOffline.style.display = 'none';
-sysOnline.style.display = 'none';
 const btn = document.getElementById('a_Button');
 const adultPopUp = document.getElementById('adultsPopUp');
+
+const isMobile = /Mobile|Android|iPhone|iPad/i.test(navigator.userAgent);
+// console.log(isMobile ? "Mobile" : "Desktop");   
+if(isMobile)
+{
+    const link = document.createElement('link');
+    link.rel = "stylesheet";
+    link.href = "CSS/mobile.css"
+    document.head.appendChild(link)
+}
+
 
 
 function animate(elem, style, unit, from, to, time, callback) {
@@ -27,17 +36,16 @@ function animate(elem, style, unit, from, to, time, callback) {
 }
 
 async function online() {
-    // const ip = 'http://192.168.1.100:4000';
     const ip = 'https://blowzier-chanelle-unmortared.ngrok-free.dev'
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(),5000)
     adultPopUp.remove();
     try {
         const response = await fetch(`${ip}/api/check-status`, {
-            method: 'GET', // Opcional pero recomendado
+            method: 'GET', 
             signal: controller.signal,
             headers: {
-                'ngrok-skip-browser-warning': 'true', // ESTO SALTA EL BLOQUEO DE NGROK
+                'ngrok-skip-browser-warning': 'true', 
                 'Accept': 'application/json'
             }
         });
@@ -84,11 +92,6 @@ async function online() {
     }
     
 }
-
-///DRIVE ACCESS
-// window.onload = online;
-
-//console.log("Test this file is from check.js");
 
 async function tempAcess()
 {

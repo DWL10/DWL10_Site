@@ -1,0 +1,31 @@
+.title{
+    width: 100%;
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-position-x: -100px;
+}
+
+.subcont{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 50%;
+    padding-top: 10px;
+}
+.subcont h1,h2,h3,h4,h5{
+    font-size: 70%;
+}
+
+.containerMain, .containerOff{
+    width: 90%;
+    max-width: 900px;
+}
+
+textarea{
+    width: 250px;
+}
+
+.checkmark {
+  height: 10px;
+  width: 10px;
+}

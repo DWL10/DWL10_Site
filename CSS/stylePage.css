@@ -32,7 +32,8 @@ body{
 
 .adultsOnly{
     background-color: #474d61;
-    width: 800px;
+    width: 90%;
+    max-width: 800px;
     height: 70px;
     color: white;
     border-radius: 20px;
@@ -43,10 +44,13 @@ body{
     /* background-color: rgb(39, 19, 112); */
     background-color: #474d61;
     background-image: url("../Resources/Images/Bannerv2.png");
-    background-position-y: -100px;
+    background-position-y: -50px;
+    background-size: 100%;
     position: sticky;
     top: 0;
-    width: 1000px;
+    /* width: 1000px; */
+    width: 90%;
+    max-width: 1000px;
     height: 120px;
     margin-bottom: 20px;
     border-radius: 20px;
@@ -59,7 +63,9 @@ body{
 }
 
 .containerConnect, .containerOff{
-    width: 800px;
+    /* width: 800px; */
+    width: 90%;
+    max-width: 800px;
     height: 96vh;
     margin: 0 auto;
     text-align: center;
@@ -98,9 +104,7 @@ section{
 
 .subcont{
     display: grid;
-    /* place-items: center; */
     place-content: center left;
-    /*min-height: 100px; /*Default 100px*/
     max-height: 500px;
     border-top: 0;
     border-left: 0;
@@ -123,7 +127,8 @@ section{
 }
 
 textarea{
-    min-width: 650px;
+    resize: none;
+    width: 650px;
     max-width: 650px;
     min-height: 100px;
     padding: 5px;

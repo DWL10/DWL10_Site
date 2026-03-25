@@ -232,7 +232,7 @@ function validate()
 async function uploadFilesToBackend(jsonFile, zipFile) {
     const formData = new FormData();
     
-    // Adjuntamos los objetos File/Blob creados en el frontend
+
     formData.append('data', jsonFile); 
     formData.append('file', zipFile); 
     
@@ -240,12 +240,11 @@ async function uploadFilesToBackend(jsonFile, zipFile) {
         const response = await fetch('https://blowzier-chanelle-unmortared.ngrok-free.dev/api/upload', {
             method: 'POST',
             body: formData,
-            // AÑADIR ESTO:
+
             headers: {
                 'ngrok-skip-browser-warning': 'true'
             }
-            // NOTA: No añadas 'Content-Type': 'multipart/form-data' aquí, 
-            // el navegador lo hace solo y añade el "boundary" necesario.
+            
         });
 
         const result = await response.json();
@@ -342,22 +341,8 @@ export function clearForm()
 {
     const container = document.querySelector(".containerMain");
     container.innerHTML = "";
-    console.log("limpiado");
     fillForm();
 }
 
 
-/*
-socialMedia
-contact
-contactInput
-*/
-
-/*
-document.getElementById("values").addEventListener("click", out);
-function out()
-{
-console.log(field1.value);
-}
-*/
 

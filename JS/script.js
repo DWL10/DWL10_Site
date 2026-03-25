@@ -33,8 +33,8 @@ paragraphNoBorder(["I follow an order based if who pays first i start first, so 
                 "So you can choose if you want to pay now, or wait until your turn comes. That will be discussed in DMs in case that your commission is choosed<br><br><br>",
             "I will take 4 slots, but if possible i will try to take more if i can, so probably would take more than 4 sometimes"]);
 
-addImage("./Resources/Images/newCommSheet2024.jpg");
-addImage("./Resources/Images/comic_sheet_2024.jpg");
+addImage("Resources/Images/newCommSheet2024.jpg");
+addImage("Resources/Images/comic_sheet_2024.jpg");
 
 const commType = addChoiceBox("What type of commission would you like?",
     ["LineArt (15$)","Flat/Colored (25$)","Shaded (35$)"],

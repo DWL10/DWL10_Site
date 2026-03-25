@@ -1,0 +1,225 @@
+/* ancho de la barra */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* fondo de la barra */
+::-webkit-scrollbar-track {
+  background: #171728;
+}
+
+/* la parte que se mueve */
+::-webkit-scrollbar-thumb {
+  background: #5353a7;
+  border-radius: 10px;
+}
+
+/* cuando pasas el mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: #6b6bff;
+}
+
+body{
+    /* background-color: #171728; */
+    /* background: linear-gradient(0deg,#171728,#5353a7); */
+    
+    background: linear-gradient(to bottom, #171728, #2a2a68);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5px 20px 20px 20px;
+    font-family: sans-serif;
+}
+
+.adultsOnly{
+    background-color: #474d61;
+    width: 800px;
+    height: 70px;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.title{
+    /* background-color: rgb(39, 19, 112); */
+    background-color: #474d61;
+    background-image: url("../Resources/Images/Bannerv2.png");
+    background-position-y: -100px;
+    position: sticky;
+    top: 0;
+    width: 1000px;
+    height: 120px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    z-index: 9999;
+}
+
+.containerConnect, .containerOff{
+    width: 800px;
+    height: 96vh;
+    margin: 0 auto;
+    text-align: center;
+}
+.containerOff{
+    padding: 50px;
+    height: 86vh;
+}
+.containerConnect img{
+    width: 100%;
+}
+
+section{
+    /* display: grid; */
+    place-items: center;
+}
+.containerMain, .containerOff{
+    background-color: #4b526b;
+    min-width: 200px;
+    width: 800px;
+    min-height: 800px;
+    border-radius: 50px;
+    color: #bec4d6;
+    overflow: hidden;
+}
+/* #online .containerMain{
+    height: 2000px;
+} */
+
+/* .containerOff{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+} */
+
+.subcont{
+    display: grid;
+    /* place-items: center; */
+    place-content: center left;
+    /*min-height: 100px; /*Default 100px*/
+    max-height: 500px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #171728;
+    padding-left: 70px;
+    padding-right: 70px;
+    line-height: 1.5;
+    overflow: hidden;
+    transition: opacity 0.5s ease,
+                max-height 0.5s ease;
+}
+
+.cuadroLabel{
+    padding: 5px;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+
+}
+
+textarea{
+    min-width: 650px;
+    max-width: 650px;
+    min-height: 100px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.cuadroLabel, .uploadFiles, textarea{
+    background-color: rgb(173, 186, 216);
+    
+}
+.choiceBox{
+    display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.choiceBox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #747c8d;
+  border-radius: 50%;
+}
+
+.choiceBox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.choiceBox input:checked ~ .checkmark {
+  background-color: #bec9e6;
+}
+
+.uploadFiles{
+
+    height: 200px;
+    border-radius: 5px;
+    background-image: url("../Resources/Images/upload.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+.uploadFiles:hover{
+    background-color: rgb(132, 147, 182);
+}
+.imgPrev{
+    align-items: center;
+}
+
+.sendButton{
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    width: 200px;
+    height: 50px;
+    background-color: #3b33a3;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.sendButton:hover{
+    background-color: #2a238d;
+    transform: scale(1.05);
+}
+.sendButton:active{
+    background-color: #443bc0;
+}
+
+.adultsOnly button{
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    width: 100px;
+    height: 30px;
+    background-color: #3b33a3;
+
+}
+.adultsOnly button:hover{
+    background-color: #2a238d;
+    transform: scale(1.05);
+}
+.adultsOnly button:active{
+    background-color: #443bc0;
+}
+
+
+.required{
+    border: 3px solid rgb(177, 19, 53);
+}

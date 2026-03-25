@@ -271,7 +271,7 @@ export function addImage(url)
     subContDiv.style.border = "none";
 
     subContDiv.innerHTML = `
-        <img src="${url}" alt="Imagen" style="width: 100%; height: auto;"><br>
+        <img src="${url}" alt="img" style="width: 100%; height: auto;"><br>
     `;
     if(container)
     {

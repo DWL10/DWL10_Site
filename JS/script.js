@@ -239,7 +239,13 @@ async function uploadFilesToBackend(jsonFile, zipFile) {
     try {
         const response = await fetch('https://blowzier-chanelle-unmortared.ngrok-free.dev/api/upload', {
             method: 'POST',
-            body: formData 
+            body: formData,
+            // AÑADIR ESTO:
+            headers: {
+                'ngrok-skip-browser-warning': 'true'
+            }
+            // NOTA: No añadas 'Content-Type': 'multipart/form-data' aquí, 
+            // el navegador lo hace solo y añade el "boundary" necesario.
         });
 
         const result = await response.json();

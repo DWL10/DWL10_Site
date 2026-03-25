@@ -33,7 +33,14 @@ async function online() {
     const timeout = setTimeout(() => controller.abort(),5000)
     adultPopUp.remove();
     try {
-        const response = await fetch(`${ip}/api/check-status`,{signal: controller.signal});
+        const response = await fetch(`${ip}/api/check-status`, {
+            method: 'GET', // Opcional pero recomendado
+            signal: controller.signal,
+            headers: {
+                'ngrok-skip-browser-warning': 'true', // ESTO SALTA EL BLOQUEO DE NGROK
+                'Accept': 'application/json'
+            }
+        });
         if (!response.ok) throw new Error('Server offline');
 
         const driveData = await response.json();

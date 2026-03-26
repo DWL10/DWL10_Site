@@ -349,11 +349,14 @@ export function clearForm()
     div.style.height = "80px";
     div.style.display = "grid";
     const sdiv1 = document.createElement('div')
-    sdiv1.appendChild(document.createElement('p').textContent = "Your form has been successfully sent!");
+    const p = document.createElement('p');
+    p.textContent = "Your form has been successfully sent!";
+    sdiv1.appendChild(p);
     const sdiv2 = document.createElement('div');
     sdiv2.style.marginTop = "-20px";
-    const btn = document.createElement('button').style.width="150px";
-    btn.textContent = "Send a new form"
+    const btn = document.createElement('button');
+    btn.style.width = "150px";
+    btn.textContent = "Send a new form";
     btn.addEventListener("click",() =>{
         container.style.display = "grid";
         fulfilled.remove();
@@ -365,6 +368,7 @@ export function clearForm()
     div.appendChild(sdiv2);
     fulfilled.appendChild(div);
     const main = document.getElementById('main').appendChild(fulfilled);
+    
     // fillForm();
 }
 

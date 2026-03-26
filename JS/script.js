@@ -337,6 +337,7 @@ async function calculate(event)
 }
 }
 
+const main = document.getElementById('main')
 export function clearForm()
 {
     const container = document.querySelector(".containerMain");
@@ -367,7 +368,7 @@ export function clearForm()
     div.appendChild(sdiv1);
     div.appendChild(sdiv2);
     fulfilled.appendChild(div);
-    const main = document.getElementById('main').appendChild(fulfilled);
+    main.appendChild(fulfilled);
     
     // fillForm();
 }

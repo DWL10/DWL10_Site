@@ -345,10 +345,16 @@ export function clearForm()
     container.style.display="none";
 
     const fulfilled = document.createElement('section');
+    fulfilled.style.display = "grid";
+    fulfilled.style.placeItems = "center";
+    fulfilled.style.minHeight = "100vh";
     const div = document.createElement('div')
+
     div.classList.add("adultsOnly");
     div.style.height = "80px";
     div.style.display = "grid";
+
+
     const sdiv1 = document.createElement('div')
     const p = document.createElement('p');
     p.textContent = "Your form has been successfully sent!";

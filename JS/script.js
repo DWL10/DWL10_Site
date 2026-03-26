@@ -341,7 +341,31 @@ export function clearForm()
 {
     const container = document.querySelector(".containerMain");
     container.innerHTML = "";
-    fillForm();
+    container.style.display="none";
+
+    const fulfilled = document.createElement('section');
+    const div = document.createElement('div')
+    div.classList.add("adultsOnly");
+    div.style.height = "80px";
+    div.style.display = "grid";
+    const sdiv1 = document.createElement('div')
+    sdiv1.appendChild(document.createElement('p').textContent = "Your form has been successfully sent!");
+    const sdiv2 = document.createElement('div');
+    sdiv2.style.marginTop = "-20px";
+    const btn = document.createElement('button').style.width="150px";
+    btn.textContent = "Send a new form"
+    btn.addEventListener("click",() =>{
+        container.style.display = "grid";
+        fulfilled.remove();
+        fillForm();
+    })
+
+    sdiv2.appendChild(btn);
+    div.appendChild(sdiv1);
+    div.appendChild(sdiv2);
+    fulfilled.appendChild(div);
+    const main = document.getElementById('main').appendChild(fulfilled);
+    // fillForm();
 }
 
 
